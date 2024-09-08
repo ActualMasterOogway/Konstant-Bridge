@@ -3,7 +3,7 @@
 A websocket bridge between discord and roblox which decompiles the bytecode of a script using the latest Konstant version.
 
 > [!CAUTION]
-> This is a [discord self-bot](https://support.discord.com/hc/en/articles/115002192352-Automatisierte-Benutzeraccounts-Self-Bots) and I will not take responsibility for any Bans.
+> This is a [discord self-bot](https://support.discord.com/hc/en/articles/115002192352) and I will not take responsibility for any Bans.
 > I recommend to use an alt-account!
 
 ## Tutorial
