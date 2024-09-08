@@ -1,7 +1,15 @@
+--!strict
 --!native
 --!optimize 2
 
-local WebSocket = WebSocket.connect('ws://localhost:2742')
+type Websocket = {
+    connect: (Link: string) -> {
+        OnMessage: RBXScriptSignal<string>,
+        Send: (...any) -> nil
+    }
+}
+
+local WebSocket = (WebSocket :: Websocket).connect('ws://localhost:2742')
 
 local Cache, RecievedData = {}, Instance.new("BindableEvent")
 

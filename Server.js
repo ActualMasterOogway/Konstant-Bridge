@@ -28,12 +28,16 @@ client.on('ready', () => {
                             return new Promise((resolve, reject) => {
                                 const timeout = setTimeout(() => reject('timeout'), 15 * 60 * 1000); // 15m timeout
 
-                                message.client.on('messageUpdate', (_, m) => {
-                                    if (m.id == message.id) {
+                                const listener = (oldMessage, newMessage) => {
+                                    if (newMessage.id == message.id) {
                                         clearTimeout(timeout);
-                                        resolve(m);
+                                        resolve(newMessage);
+
+                                        client.off('messageUpdate', listener);
                                     }
-                                });
+                                };
+
+                                client.on('messageUpdate', listener);
                             });
                         } else {
                             return Promise.resolve(message);
