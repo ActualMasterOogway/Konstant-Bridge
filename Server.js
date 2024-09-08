@@ -1,5 +1,4 @@
-let Token = ''
-
+const { readFileSync } = require('fs');
 const discord = require('discord.js-selfbot-v13');
 const WebSocket = require('ws');
 const { Buffer } = require('buffer');
@@ -63,4 +62,4 @@ client.on('ready', () => {
     });
 });
 
-client.login(Token);
+client.login(readFileSync('./Token.dcToken', 'utf8').trim());
