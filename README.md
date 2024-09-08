@@ -10,7 +10,7 @@ A websocket bridge between discord and roblox which decompiles the bytecode of a
 
 - Download [Node.js](https://nodejs.dev/)
 - Open command prompt and run this command `npm install discord.js-selfbot-v13 ws node-fetch`
-- Open `Server.js` and input your token in the two `'` of the first line, [How do i get my token?](https://stackoverflow.com/a/69868564/22794987)
+- Open `Server.js` and input your token between the two `'` of the first line, [How do i get my token?](https://stackoverflow.com/a/69868564/22794987)
 - In command prompt, run `node Server.js` and wait for it to say "Ready!"
 - Open Roblox, Inject your executor, and execute the script in `Connect.luau`
 
